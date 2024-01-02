@@ -1,4 +1,8 @@
 const router = require('express').Router();
+const bcrpyt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
+const {JWT_TOKENS} = require('../JRtolkiens/tokens')
+const {checkBody, checkUsername, checkUsernameDB} = require('./auth-middleware')
 
 router.post('/register', (req, res) => {
   res.end('implement register, please!');
